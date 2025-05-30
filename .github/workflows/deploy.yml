@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Docker Build process
-        run: docker build . akshansh29/next-js-app
+        run: docker build . -t akshansh29/next-js-app
 
       - name: DockerHub login
         run: echo "${{secrets.DOCKERHUB_PASSWORD}} | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin"
